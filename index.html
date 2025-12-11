@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>emuloV - Ideation Accelerator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#2563eb',
+                        'bg-dark': '#0d1117',
+                        'bg-card': '#161b22',
+                        'text-main': '#c9d1d9',
+                        'text-muted': '#8b949e',
+                        'border-dark': '#30363d',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0d1117;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #30363d;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #58a6ff;
+        }
+
+        /* Animations */
+        @keyframes blob1 {
+            0% { transform: rotate(0deg) scale(1); }
+            50% { transform: rotate(180deg) scale(1.2); }
+            100% { transform: rotate(360deg) scale(1); }
+        }
+        @keyframes blob2 {
+            0% { transform: rotate(360deg) scale(1); }
+            50% { transform: rotate(180deg) scale(1.5); }
+            100% { transform: rotate(0deg) scale(1); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInDelay1 {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInDelay2 {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .animate-blob1 {
+            animation: blob1 20s infinite linear;
+        }
+        .animate-blob2 {
+            animation: blob2 25s infinite linear;
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+        .animate-fade-in-delay-1 {
+            opacity: 0;
+            animation: fadeInDelay1 0.6s ease-out 0.2s forwards;
+        }
+        .animate-fade-in-delay-2 {
+            opacity: 0;
+            animation: fadeInDelay2 0.6s ease-out 0.4s forwards;
+        }
+    </style>
+</head>
+<body class="selection:bg-blue-500/30">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 bg-[#0d1117]/80 backdrop-blur-md border-b border-[#30363d]">
+        <div class="flex items-center gap-2">
+            <!-- Logo Icon: Stylized V -->
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 8L16 24L24 8" stroke="#c9d1d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M16 24L24 16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M8 8L16 16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="text-xl font-bold tracking-tight text-[#c9d1d9] font-mono">emuloV</span>
+        </div>
+
+        <div class="hidden md:flex items-center gap-8">
+            <button class="px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg hover:from-blue-500 hover:to-blue-400 transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)] cursor-pointer">
+                Request Access
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-[#0d1117] font-sans">
+            <!-- Background Video -->
+            <div class="absolute inset-0 w-full h-full z-0">
+                <video
+                    class="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-luminosity"
+                    src="assets/hero-background.mp4"
+                    autoplay
+                    loop
+                    muted
+                    playsinline
+                >
+                    <source src="assets/hero-background.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0d1117] via-[#0d1117]/80 to-transparent opacity-[0.18]"></div>
+            </div>
+
+            <!-- Background Animation -->
+            <div class="absolute inset-0 overflow-hidden pointer-events-none z-0 opacity-50">
+                <div class="absolute -top-1/2 -left-1/2 w-[100vw] h-[100vw] bg-blue-600/10 rounded-full blur-[100px] animate-blob1"></div>
+                <div class="absolute top-1/2 -right-1/2 w-[80vw] h-[80vw] bg-purple-600/10 rounded-full blur-[120px] animate-blob2"></div>
+            </div>
+
+            <div class="container mx-auto px-6 relative z-10 flex flex-col items-start justify-center text-left">
+                <div class="max-w-4xl animate-fade-in">
+                    <span class="text-[#58a6ff] font-mono font-medium tracking-wider text-sm uppercase">&lt;IdeationAccelerator /&gt;</span>
+                    <h1 class="text-5xl lg:text-7xl font-bold text-[#c9d1d9] mt-4 leading-tight tracking-tight">
+                        Stop Modeling. <br />
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#58a6ff] to-[#bc8cff]">Start Ideating.</span>
+                    </h1>
+                    <p class="text-[#8b949e] text-lg lg:text-xl mt-6 max-w-2xl leading-relaxed font-mono">
+                        Bridge the chasm between 2D sketching and 3D form. The first AI copilot designed to turn professional industrial design sketches into volumetric 3D concepts in seconds. No CAD required.
+                    </p>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 mt-10 w-full animate-fade-in-delay-1">
+                    <input
+                        type="email"
+                        placeholder="user@company.com"
+                        class="px-6 py-4 bg-[#0d1117] border border-[#30363d] rounded-xl text-[#c9d1d9] placeholder-[#484f58] focus:outline-none focus:border-[#58a6ff] focus:ring-1 focus:ring-[#58a6ff] w-full sm:w-auto min-w-[300px] font-mono text-sm"
+                    />
+                    <button class="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-bold rounded-xl shadow-[0_0_30px_rgba(37,99,235,0.4)] hover:shadow-[0_0_50px_rgba(37,99,235,0.6)] transition-all transform hover:-translate-y-1 cursor-pointer">
+                        Request Early Access
+                    </button>
+                </div>
+
+                <div class="mt-6 animate-fade-in-delay-2">
+                    <p class="text-xs text-[#8b949e] font-mono">Limited spots available for Alpha Cohort 1.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
