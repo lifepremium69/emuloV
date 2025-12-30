@@ -29,8 +29,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #ffffff;
-            color: #000000;
+            background-color: #0d1117;
+            color: #c9d1d9;
             font-family: 'Inter', sans-serif;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
@@ -42,16 +42,16 @@
         }
 
         ::-webkit-scrollbar-track {
-            background: #ffffff;
+            background: #0d1117;
         }
 
         ::-webkit-scrollbar-thumb {
-            background: #d1d5db;
+            background: #30363d;
             border-radius: 4px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: #3b82f6;
+            background: #58a6ff;
         }
 
         /* Animations */
@@ -145,17 +145,17 @@
 
     <!-- Navbar -->
     <nav
-        class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 bg-white/80 backdrop-blur-md border-b border-gray-200">
+        class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 bg-[#0d1117]/80 backdrop-blur-md border-b border-[#30363d]">
         <div class="flex items-center gap-2">
             <!-- Logo Icon: Stylized V -->
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 8L16 24L24 8" stroke="black" stroke-width="2" stroke-linecap="round"
+                <path d="M8 8L16 24L24 8" stroke="#c9d1d9" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round" />
                 <path d="M16 24L24 16" stroke="#2563eb" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round" />
                 <path d="M8 8L16 16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
-            <span class="text-xl font-bold tracking-tight text-black font-mono">emuloV</span>
+            <span class="text-xl font-bold tracking-tight text-[#c9d1d9] font-mono">emuloV</span>
         </div>
 
         <div class="hidden md:flex items-center gap-8">
@@ -169,20 +169,20 @@
     <main>
         <!-- Hero Section -->
         <section
-            class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-white font-sans">
+            class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-[#0d1117] font-sans">
             <!-- Background Video -->
             <div class="absolute inset-0 w-full h-full z-0">
                 <div class="pointer-events-none absolute inset-0 w-full h-full overflow-hidden">
                     <iframe
-                        class="absolute top-1/2 left-1/2 w-[177.77777778vh] min-w-full min-h-[56.25vw] h-full transform -translate-x-1/2 -translate-y-1/2 object-cover opacity-20"
+                        class="absolute top-1/2 left-1/2 w-[177.77777778vh] min-w-full min-h-[56.25vw] h-full transform -translate-x-1/2 -translate-y-1/2 object-cover opacity-20 mix-blend-luminosity"
                         src="https://www.youtube-nocookie.com/embed/FP1HkWOmh64?autoplay=1&mute=1&controls=0&loop=1&playlist=FP1HkWOmh64&playsinline=1&enablejsapi=1&showinfo=0&rel=0&iv_load_policy=3&disablekb=1"
                         title="Background Video" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                     </iframe>
                 </div>
-                <!-- 5% Overlay as requested -->
-                <div class="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent opacity-[0.05]">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-[#0d1117] via-[#0d1117]/80 to-transparent opacity-[0.18]">
                 </div>
             </div>
 
@@ -199,30 +199,110 @@
             <div class="container mx-auto px-6 relative z-10 flex flex-col items-start justify-center text-left">
                 <div class="max-w-4xl animate-fade-in">
                     <span
-                        class="text-blue-600 font-mono font-medium tracking-wider text-sm uppercase">&lt;IdeationAccelerator
+                        class="text-[#58a6ff] font-mono font-medium tracking-wider text-sm uppercase">&lt;IdeationAccelerator
                         /&gt;</span>
-                    <h1 class="text-5xl lg:text-7xl font-bold text-black mt-4 leading-tight tracking-tight">
-                        Stop Modeling. <br />
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Start
-                            Ideating.</span>
+                    <h1 class="text-5xl lg:text-7xl font-bold text-[#c9d1d9] mt-4 leading-tight tracking-tight">
+                        Tired of wrestling with CAD just to shape ideas?
                     </h1>
-                    <p class="text-gray-700 text-lg lg:text-xl mt-6 max-w-2xl leading-relaxed font-mono">
-                        Bridge the chasm between 2D sketching and 3D form. The first AI copilot designed to turn
-                        professional industrial design sketches into volumetric 3D concepts in seconds. No CAD required.
+                    <p class="text-[#8b949e] text-lg lg:text-xl mt-6 max-w-2xl leading-relaxed font-mono">
+                        EmuloV’s AI instantly turns sketches, prompts, or images into volumetric 3D concepts, cutting
+                        hours to seconds. Pure creative boost: iterate fast, wow clients.
                     </p>
                 </div>
 
-                <div class="flex flex-col sm:flex-row gap-4 mt-10 w-full animate-fade-in-delay-1">
-                    <input type="email" placeholder="user@company.com"
-                        class="px-6 py-4 bg-gray-50 border border-gray-300 rounded-xl text-black placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 w-full sm:w-auto min-w-[300px] font-mono text-sm" />
-                    <button
+                <!-- Mailchimp Signup Form -->
+                <form id="mc-embedded-subscribe-form"
+                    class="flex flex-col sm:flex-row gap-4 mt-10 w-full animate-fade-in-delay-1"
+                    onsubmit="return handleFormSubmit(event)">
+
+                    <input type="email" name="EMAIL" id="mce-EMAIL" required placeholder="user@company.com"
+                        class="px-6 py-4 bg-[#0d1117] border border-[#30363d] rounded-xl text-[#c9d1d9] placeholder-[#484f58] focus:outline-none focus:border-[#58a6ff] focus:ring-1 focus:ring-[#58a6ff] w-full sm:w-auto min-w-[300px] font-mono text-sm" />
+
+                    <!-- Anti-bot honeypot field - leave empty -->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                        <input type="text" name="b_50e6d575fd4a15a49f77a56da_12f528944a" tabindex="-1" value="">
+                    </div>
+
+                    <button type="submit" id="mc-submit-btn"
                         class="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-bold rounded-xl shadow-[0_0_30px_rgba(37,99,235,0.4)] hover:shadow-[0_0_50px_rgba(37,99,235,0.6)] transition-all transform hover:-translate-y-1 cursor-pointer">
                         Request Early Access
                     </button>
-                </div>
+                </form>
+
+                <!-- Success/Error Messages -->
+                <div id="form-message" class="hidden mt-4 px-4 py-3 rounded-lg font-mono text-sm"></div>
+
+                <script>
+                    function handleFormSubmit(event) {
+                        event.preventDefault();
+
+                        const form = document.getElementById('mc-embedded-subscribe-form');
+                        const email = document.getElementById('mce-EMAIL').value;
+                        const submitBtn = document.getElementById('mc-submit-btn');
+                        const messageDiv = document.getElementById('form-message');
+
+                        // Basic email validation
+                        if (!email || !email.includes('@') || !email.includes('.')) {
+                            messageDiv.className = 'mt-4 px-4 py-3 rounded-lg font-mono text-sm bg-red-500/20 text-red-400 border border-red-500/30';
+                            messageDiv.textContent = 'Please enter a valid email address.';
+                            return false;
+                        }
+
+                        // Show loading state
+                        submitBtn.innerHTML = 'Submitting...';
+                        submitBtn.disabled = true;
+                        messageDiv.className = 'hidden';
+
+                        // Mailchimp JSONP URL (replace /post with /post-json and add callback)
+                        const url = 'https://xyz.us18.list-manage.com/subscribe/post-json?u=50e6d575fd4a15a49f77a56da&id=12f528944a&f_id=00aba4e6f0&EMAIL=' + encodeURIComponent(email) + '&c=mailchimpCallback';
+
+                        // Create callback function
+                        window.mailchimpCallback = function (response) {
+                            submitBtn.innerHTML = 'Request Early Access';
+                            submitBtn.disabled = false;
+
+                            if (response.result === 'success') {
+                                messageDiv.className = 'mt-4 px-4 py-3 rounded-lg font-mono text-sm bg-green-500/20 text-green-400 border border-green-500/30';
+                                messageDiv.textContent = '🎉 Thanks! Check your email to confirm your spot.';
+                                form.reset();
+                            } else {
+                                // Handle errors (e.g., already subscribed)
+                                let errorMsg = response.msg || 'Something went wrong. Please try again.';
+                                // Clean up Mailchimp's HTML in error messages
+                                errorMsg = errorMsg.replace(/<a[^>]*>.*?<\/a>/gi, '').trim();
+
+                                if (errorMsg.toLowerCase().includes('already subscribed')) {
+                                    messageDiv.className = 'mt-4 px-4 py-3 rounded-lg font-mono text-sm bg-yellow-500/20 text-yellow-400 border border-yellow-500/30';
+                                    messageDiv.textContent = '👋 You\'re already on the list! We\'ll be in touch soon.';
+                                } else {
+                                    messageDiv.className = 'mt-4 px-4 py-3 rounded-lg font-mono text-sm bg-red-500/20 text-red-400 border border-red-500/30';
+                                    messageDiv.textContent = errorMsg;
+                                }
+                            }
+
+                            // Cleanup script tag
+                            const scriptTag = document.getElementById('mc-jsonp-script');
+                            if (scriptTag) scriptTag.remove();
+                        };
+
+                        // Inject JSONP script
+                        const script = document.createElement('script');
+                        script.id = 'mc-jsonp-script';
+                        script.src = url;
+                        script.onerror = function () {
+                            submitBtn.innerHTML = 'Request Early Access';
+                            submitBtn.disabled = false;
+                            messageDiv.className = 'mt-4 px-4 py-3 rounded-lg font-mono text-sm bg-red-500/20 text-red-400 border border-red-500/30';
+                            messageDiv.textContent = 'Connection error. Please try again.';
+                        };
+                        document.body.appendChild(script);
+
+                        return false;
+                    }
+                </script>
 
                 <div class="mt-6 animate-fade-in-delay-2">
-                    <p class="text-xs text-gray-500 font-mono">Limited spots available for Alpha Cohort 1.</p>
+                    <p class="text-xs text-[#8b949e] font-mono">Limited spots available for Alpha Cohort 1.</p>
                 </div>
             </div>
         </section>
